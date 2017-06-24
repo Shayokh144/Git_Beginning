@@ -105,6 +105,15 @@ a new line "I am from slave" after the existing line and save this. Now, we have
      now we are in the master branch. We want here the update from slave branch. So write:
      ii) git merge slave 
      We are done. Open the file First.txt and find the magic of git :) .
+ But there are some situations where merge conflict occurs, 
+ read here  [ https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging ]  for more information.
+ 
+ 
+ 
+ ---------------------------------------Merge End-----------------------------------------------------------
+ 
+-------------------------------Working with Remotes---------------------------------------------
+ 
     
 
     
