@@ -112,8 +112,4 @@ a new line "I am from slave" after the existing line and save this. Now, we have
  
  ---------------------------------------Merge End-----------------------------------------------------------
  
--------------------------------Working with Remotes---------------------------------------------
- 
-    
 
-    
