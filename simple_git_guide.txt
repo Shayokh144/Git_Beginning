@@ -35,7 +35,7 @@
 		When we create a file it remains in the working copy. Here, "first.txt" is in working copy now.
 
 		ii) Staging area: 
-		When we use "git add ." cmd then all files in the current directory goes to staging area. Now, open the             "first.txt" file and write something on it. I write "Thsi is my first git prac." Then write this cmd in git bash:
+		When we use "git add ." cmd then all files in the current directory goes to staging area. Now, open the             "first.txt" file and write something on it. I write "Thsi is my first git prac from master." Then write this cmd in git bash:
 			a)  git add .
 			this cmd(a)  adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit.
 			So, the first.txt file is now in the staging area.
@@ -77,7 +77,8 @@
 		i) git checkout slave
 		after writing this, we are in  the slave branch which is the copy of master branch because we create slave branch from master branch.
 
-11. This time open the "first.txt" file and you can see the same thing that was in the master branch. Now change the text . I write "This slave branch and this is my first git prac." and save this. Now, we have to commit these changes to the current slave branch. So, write:
+11. This time open the "first.txt" file and you can see the same thing that was in the master branch. Now change the text. I add 
+a new line "I am from slave" after the existing line and save this. Now, we have to commit these changes to the current slave branch. So, write:
 
 	i)  git add .
 	ii) git commit -m "This is my first commit from slave"		
@@ -95,7 +96,15 @@
 
     -------------------------------------Branch End-------------------------------------
 
+------------------------------------------Merge--------------------------------------------------------
 
+ 14. In projects we nedd the change or updated codes from one branch to another. Like , If we want to get the changes from 
+ slave branch to master branch. To do this we have to merge them. 
+ First we have to go master branch, so write: 
+     i)  git checkout master
+     now we are in the master branch. We want here the update from slave branch. So write:
+     ii) git merge slave 
+     We are done. Open the file First.txt and find the magic of git :) .
     
 
     
