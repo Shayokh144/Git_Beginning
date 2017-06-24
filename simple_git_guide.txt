@@ -31,9 +31,11 @@
 
         ****[ https://www.quora.com/What-is-the-meaning-of-commit-and-stage-in-git ]
 
-		i)  Working copy: When we create a file it remains in the working copy. Here, "first.txt" is in working copy now.
+		i)  Working copy: 
+		When we create a file it remains in the working copy. Here, "first.txt" is in working copy now.
 
-		ii) Staging area: When we use "git add ." cmd then all files in the current directory goes to staging area. Now, open the "first.txt" file and write something on it. I write "Thsi is my first git prac." Then write this cmd in git bash:
+		ii) Staging area: 
+		When we use "git add ." cmd then all files in the current directory goes to staging area. Now, open the             "first.txt" file and write something on it. I write "Thsi is my first git prac." Then write this cmd in git bash:
 			a)  git add .
 			this cmd(a)  adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit.
 			So, the first.txt file is now in the staging area.
@@ -94,6 +96,6 @@
     -------------------------------------Branch End-------------------------------------
 
 
-    --------------------------------------Merge-----------------------------------------
+    
 
     
