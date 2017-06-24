@@ -1,0 +1,99 @@
+*** Download git from here : https://git-scm.com/download/win
+*** Then install
+*** If there is any problem watch this : https://www.youtube.com/watch?v=SmbAn2_5uGs
+
+1. Create a folder anywhere.
+
+2. Create a txt file. I created "first.txt".
+
+3. Now, right click on mouse in that folder and click on "Git Bash Here".
+
+4. A command promt [ Git bash ] will open which is used to perform various version controlling operation.
+
+5. First we have to get logged in. For this we nedd to write on that cmd:
+		
+		i)	git config --global user.email "abcd@gmail.com"
+		
+		ii)	git config --global user.name "something"
+		**** I used my github username and email here but anything can be used.
+6. Now we are ready to perform version controlling. At first we have to create a git repository by using this command:
+		i)  git init
+		*** After this an empty repository is created.
+
+
+
+
+---------------------------------------Git Work Flow------------------------------------------------
+
+
+
+7. In git there are three types of things we have to deal with:  
+
+        ****[ https://www.quora.com/What-is-the-meaning-of-commit-and-stage-in-git ]
+
+		i)  Working copy: When we create a file it remains in the working copy. Here, "first.txt" is in working copy now.
+
+		ii) Staging area: When we use "git add ." cmd then all files in the current directory goes to staging area. Now, open the "first.txt" file and write something on it. I write "Thsi is my first git prac." Then write this cmd in git bash:
+			a)  git add .
+			this cmd(a)  adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit.
+			So, the first.txt file is now in the staging area.
+
+		iii) Git Repository: It stores the current contents of the index/staging area in a new commit along with a log message from the user describing the changes. So, commit means takes a snap shot of files and save it in the repository finally.
+		So, we have to commit by using this command:
+
+		a) git commit -m "This is my first commit"
+		here, "This is my first commit" is the commiting message, anything can be written.
+		After writing this command all files are saved in git repository.
+
+		We can watch commit history by using :
+		a) git log
+		or only for specific author's commit history,
+		a) git log --author="author's username"
+
+
+
+---------------------------------------Work Flow End-------------------------------------------------------
+
+
+
+
+----------------------------------------- Git Branch------------------------------------------------------
+
+8. By default when we initiate a git repository we are in master branch. To check this write:
+
+		i) git branch
+		this cmd shows the names of branches. As we didn't create any branch it will show only "master" branch.
+
+9. To creat a new branch from current branch :
+
+		i) git branch slave
+		This cmd create a new branch named "slave" from current branch [ we are currently in master branch]. 
+		To find out if the new branch is created or not use this cmd: git branch
+		it will show the names of branches and an asteric symbol beside the current branch name.
+
+10. Now, if we want to go another branch [slave] from current branch [master] :
+		i) git checkout slave
+		after writing this, we are in  the slave branch which is the copy of master branch because we create slave branch from master branch.
+
+11. This time open the "first.txt" file and you can see the same thing that was in the master branch. Now change the text . I write "This slave branch and this is my first git prac." and save this. Now, we have to commit these changes to the current slave branch. So, write:
+
+	i)  git add .
+	ii) git commit -m "This is my first commit from slave"		
+
+12. To understand the branching effect we have to go to the master branch using:
+    i) git checkout master
+    Now open the "first.txt" file you only find the text "Thsi is my first git 
+    prac." that we wrote and commit when we were in the master branch.
+
+13. To delete any branch use :
+    i) git branch -D Branch_Name
+
+   
+
+
+    -------------------------------------Branch End-------------------------------------
+
+
+    --------------------------------------Merge-----------------------------------------
+
+    
