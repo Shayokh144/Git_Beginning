@@ -112,4 +112,8 @@ a new line "I am from slave" after the existing line and save this. Now, we have
  
  ---------------------------------------Merge End-----------------------------------------------------------
  
+ 
+ -----------------------upload from desktop to github--------------------------------------------------------------
+ https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+ https://help.github.com/articles/adding-a-remote/
 
