@@ -6,8 +6,8 @@
 
 2. Create a txt file. I created "first.txt".
 
-3. Now, right click on mouse in that folder and click on "Git Bash Here".
-
+3. Now, right click on mouse in that folder and click on "Git Bash Here".[for windows user only]
+	*** linux user just open terminal
 4. A command promt [ Git bash ] will open which is used to perform various version controlling operation.
 
 5. First we have to get logged in. For this we nedd to write on that cmd:
