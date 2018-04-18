@@ -119,7 +119,11 @@ a new line "I am from slave" after the existing line and save this. Now, we have
  
  
  -------------------------------------RESEt-------------------------------------------------------------------
- 1. git reset --hard
+
+*******Read this : https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+
+
+1. git reset --hard
  the above command remove all uncommited change . (Dangerous!!)
  
  2. git reset --hard <SOME-COMMIT> 
