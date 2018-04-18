@@ -116,4 +116,15 @@ a new line "I am from slave" after the existing line and save this. Now, we have
  -----------------------upload from desktop to github--------------------------------------------------------------
  https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
  https://help.github.com/articles/adding-a-remote/
+ 
+ 
+ -------------------------------------RESEt-------------------------------------------------------------------
+ 1. git reset --hard
+ the above command remove all uncommited change . (Dangerous!!)
+ 
+ 2. git reset --hard <SOME-COMMIT> 
+ Make your current branch (typically master) back to point at <SOME-COMMIT>.
+ Then make the files in your working tree and the index ("staging area") the same as the versions committed in <SOME-COMMIT>.
 
+ 3. git clean -f
+ remove untracked changes.
