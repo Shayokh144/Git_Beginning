@@ -132,3 +132,10 @@ a new line "I am from slave" after the existing line and save this. Now, we have
 
  3. git clean -f
  remove untracked changes.
+ 
+ 
+ ---------------Remove all uncommited change---------------------------------------------------------
+ https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes
+1. git reset
+2. git checkout .
+3. git clean -fdx
