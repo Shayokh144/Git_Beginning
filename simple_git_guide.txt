@@ -139,3 +139,18 @@ a new line "I am from slave" after the existing line and save this. Now, we have
 1. git reset
 2. git checkout .
 3. git clean -fdx
+
+
+-------------Edit file that goes in last commited push ----------------
+https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8
+
+
+suppose there is a file "Abc.cpp" in which you changed and pushed. Suddenly you realize there should be a small change needed. There are two ways to do it -> i)  Commit and push again with new change
+			       ii) edit the last commit and then push 
+Second one is better for small changes. It will kepp working tree cleaner. To do this follow the below steps:
+i)   git status
+ii)  find the desired file name with path like : "modified:  code/Abc.cpp"
+iii) git add  code/Abc.cpp
+iv)  git commit --amend --no-edit 
+*** if you dont want to chage the commit message use above command otherwise use git commit --amend
+v)  git push origin "BRANCH_NAME"
