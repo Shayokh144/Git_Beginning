@@ -154,3 +154,11 @@ iii) git add  code/Abc.cpp
 iv)  git commit --amend --no-edit 
 *** if you dont want to chage the commit message use above command otherwise use git commit --amend
 v)  git push origin "BRANCH_NAME"
+
+
+
+
+---------------------------------------------------------------------------------
+			pull vs pull --rebase
+----------------------------------------------------------------------------------
+https://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase
