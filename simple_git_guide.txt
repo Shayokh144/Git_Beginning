@@ -150,7 +150,7 @@ suppose there is a file "Abc.cpp" in which you changed and pushed. Suddenly you 
 Second one is better for small changes. It will kepp working tree cleaner. To do this follow the below steps:
 i)   git status
 ii)  find the desired file name with path like : "modified:  File_Path/Abc.cpp"
-iii) git add  code/Abc.cpp
+iii) git add  File_Path/Abc.cpp
 iv)  git commit --amend --no-edit 
 *** if you dont want to chage the commit message use above command otherwise use git commit --amend
 v)  git push origin "BRANCH_NAME"
