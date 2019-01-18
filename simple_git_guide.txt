@@ -162,3 +162,15 @@ v)  git push origin "BRANCH_NAME"
 			pull vs pull --rebase
 ----------------------------------------------------------------------------------
 https://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase
+
+
+
+------------------------------------------------------------------------------------
+			All about STASH
+------------------------------------------------------------------------------------
+1. Find all list of stash - git stash list
+2. Stash files using message - git stash push -m "message"
+3. Apply particular stash from stash list - git stash apply stash@{Nth}
+4. Delete particular stash from list - git stash drop stash@{Nth}
+5. Apply and delete stash from stack at a time - git stash pop stash@{Nth}
+6. Show stash summary -  git stash show -p
