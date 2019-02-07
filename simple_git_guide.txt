@@ -174,3 +174,14 @@ https://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase
 4. Delete particular stash from list - git stash drop stash@{Nth}
 5. Apply and delete stash from stack at a time - git stash pop stash@{Nth}
 6. Show stash summary -  git stash show -p
+
+
+
+----------------------------------------------------------------------------------------
+			Undo Redo Most Recent Commit
+----------------------------------------------------------------------------------------
+$ git commit -m "Something terribly misguided"             # (1) commit done
+$ git reset HEAD~                                          # (2) get back committed changes
+<< edit files as necessary >>                              # (3)
+$ git add ...                                              # (4) add again
+$ git commit -c ORIG_HEAD                                  # (5) commit again
