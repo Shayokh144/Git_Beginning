@@ -185,3 +185,10 @@ $ git reset HEAD~                                          # (2) get back commit
 << edit files as necessary >>                              # (3)
 $ git add ...                                              # (4) add again
 $ git commit -c ORIG_HEAD                                  # (5) commit again
+
+
+
+------------------------------------------------------------------------------------------------------------
+			discard change of a file / get back to the previous state of a file
+------------------------------------------------------------------------------------------------------------
+git checkout -- file_name
