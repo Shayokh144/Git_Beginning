@@ -207,3 +207,11 @@ when merge conflict occurs, our local changes are shown inside the HEAD block an
 Here will be the remote changes
 >>>>>>>>
 
+
+------------------------------------------------------------------------------------------------------------
+			untrack a file
+------------------------------------------------------------------------------------------------------------
+command for untracking a file:
+git rm --cached filepath+Name
+
+** after running this command git will not track the file, but it will remain in the file system of computer 
