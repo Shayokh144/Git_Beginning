@@ -215,3 +215,25 @@ command for untracking a file:
 git rm --cached filepath+Name
 
 ** after running this command git will not track the file, but it will remain in the file system of computer 
+
+
+
+------------------------------------------------------------------------------------------------------------
+			go back to a previous commit, then back to the latest commit
+------------------------------------------------------------------------------------------------------------
+
+go back to any previous commit:
+	git checkout <commit_hash>
+
+** This would detach the head. So, to get back to the latest commit run the following command:
+	git checkout BRANCH_NAME
+details : https://stackoverflow.com/a/39197098/4245112
+
+
+
+
+
+
+
+
+
