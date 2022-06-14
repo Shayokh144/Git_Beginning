@@ -232,8 +232,20 @@ details : https://stackoverflow.com/a/39197098/4245112
 
 
 
+------------------------------------------------------------------------------------------------------------
+			GIT ALIAS
+------------------------------------------------------------------------------------------------------------
 
-
+* using alias we can shotening git commands
+	* cmd : git config --global alias.logo 'log --oneline'
+	* after running above command we can use 'git logo' instead of 'git log --oneline'
+	* cmd : git config --global alias.cane 'commit --amend --no-edit'
+	* after running this command we can use 'git cane' instead of 'git commit --amend --no-edit'
+* find list of all alias:
+	* cmd : git config --list | grep alias
+	* it will show:
+		alias.logo=log --oneline
+		alias.cane=commit --amend --no-edit
 
 
 
