@@ -15,7 +15,9 @@
 		i)	git config --global user.email "abcd@gmail.com"
 		
 		ii)	git config --global user.name "something"
-		****  Any valid email address and username can be used.
+		
+		**** Any valid email address and username can be used.
+		**** if you want to configure this only for specific repo just remove the --global from avove command. and run it.
 6. Now we are ready to perform version controlling. At first we have to create a git repository by using this command:
 		i)  git init
 		*** After this an empty repository is created.
