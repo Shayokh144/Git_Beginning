@@ -250,4 +250,8 @@ details : https://stackoverflow.com/a/39197098/4245112
 		alias.cane=commit --amend --no-edit
 
 
-
+---------------------------------------------------------------------------------------------------------
+			go prevoius or next head
+---------------------------------------------------------------------------------------------------------
+Moving upwards one commit at a time with ^
+Moving upwards a number of times with ~<number of times>
