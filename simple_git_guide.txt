@@ -255,3 +255,17 @@ details : https://stackoverflow.com/a/39197098/4245112
 ---------------------------------------------------------------------------------------------------------
 Moving upwards one commit at a time with ^
 Moving upwards a number of times with ~<number of times>
+
+----------------------------------------------------------------------------------------------------------
+caret ^ operator
+----------------------------------------------------------------------------------------------------------
+
+Let's look at the Caret (^) operator first. Each time you append that to a ref name, you are telling Git to find the parent of the specified commit.
+
+So saying main^ is equivalent to "the first parent of main".
+
+main^^ is the grandparent (second-generation ancestor) of main
+
+git checkout main^
+
+this will move the head to the parent of main
