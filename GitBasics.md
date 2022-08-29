@@ -88,42 +88,40 @@
 		i) git branch -D Branch_Name
 
 
-------------------------------------------Merge--------------------------------------------------------
-
- 14. In projects we nedd the change or updated codes from one branch to another. Like , If we want to get the changes from 
- slave branch to master branch. To do this we have to merge them. 
- First we have to go master branch, so write: 
-     i)  git checkout master
-     now we are in the master branch. We want here the update from slave branch. So write:
-     ii) git merge slave 
-     We are done. Open the file First.txt and find the magic of git :) .
- But there are some situations where merge conflict occurs, 
- read here  [ https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging ]  for more information.
- 
- 
- 
- ---------------------------------------Merge End-----------------------------------------------------------
- 
- 
- -----------------------upload from desktop to github--------------------------------------------------------------
- https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
- https://help.github.com/articles/adding-a-remote/
- 
- 
- -------------------------------------RESEt-------------------------------------------------------------------
-
-*******Read this : https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+## Merge
 
 
-1. git reset --hard
- the above command remove all uncommited change . (Dangerous!!)
- 
- 2. git reset --hard <SOME-COMMIT> 
- Make your current branch (typically master) back to point at <SOME-COMMIT>.
- Then make the files in your working tree and the index ("staging area") the same as the versions committed in <SOME-COMMIT>.
+- In projects we nedd the change or updated codes from one branch to another. Like , If we want to get the changes from slave branch to master branch. To do this we have to merge them. First we have to go master branch, so write: 
+     
+		i)  git checkout master
+- now we are in the master branch. We want here the update from slave branch. So write:
 
- 3. git clean -f
- remove untracked changes.
+		ii) git merge slave 
+- We are done. Open the file First.txt and find the magic of git :) . 
+- But there are some situations where merge conflict occurs, read [here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for more information.
+
+ 
+ 
+## upload from desktop to github
+
+- read [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+- more [info](https://help.github.com/articles/adding-a-remote/)
+ 
+ 
+## RESET
+
+
+- Read [this](https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/) 
+
+
+		git reset --hard
+ 		**** the above command remove all uncommited change . (Dangerous!!)
+ 
+		git reset --hard <SOME-COMMIT> 
+ 		**** Make your current branch (typically master) back to point at <SOME-COMMIT>.Then make the files in your working tree and the index ("staging area") the same as the versionscommitted in <SOME-COMMIT>.
+
+		git clean -f
+		**** remove untracked changes.
  
  
  ---------------Remove all uncommited change---------------------------------------------------------
