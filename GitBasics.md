@@ -1,37 +1,34 @@
-*** Download git from here : https://git-scm.com/download/win
-*** Then install
-*** If there is any problem watch this : https://www.youtube.com/watch?v=SmbAn2_5uGs
+- Download git from [here](https://git-scm.com/download/win) for windows  : 
+- Then install
+- If there is any problem watch [this](https://www.youtube.com/watch?v=SmbAn2_5uGs)
 
-1. Create a folder anywhere.
+- Create a folder anywhere.
 
-2. Create a txt file. I created "first.txt".
+- Create a txt file. I created "first.txt".
 
-3. Now, right click on mouse in that folder and click on "Git Bash Here".[for windows user only]
-	*** linux user just open terminal
-4. A command promt [ Git bash ] will open which is used to perform various version controlling operation.
+- Now, right click on mouse in that folder and click on "Git Bash Here".[for windows user only]
+> linux or Mac user just open terminal
+- A command promt [ Git bash ] will open which is used to perform various version controlling operation.
 
-5. First we have to get logged in. For this we nedd to write on that cmd:
+- First we have to get logged in. For this we nedd to write on that cmd:
 		
 		i)	git config --global user.email "abcd@gmail.com"
 		
 		ii)	git config --global user.name "something"
 		
 		**** Any valid email address and username can be used.
-		**** if you want to configure this only for specific repo just remove the --global from avove command. and run it.
-6. Now we are ready to perform version controlling. At first we have to create a git repository by using this command:
-		i)  git init
-		*** After this an empty repository is created.
+		**** if you want to configure this only for specific repo just remove the --global from avove command and run it.
+- Now we are ready to perform version controlling. At first we have to create a git repository by using this command:
+	- **git init**
+		- After this an empty repository is created.
+		
 
 
+## Git Work Flow
 
 
----------------------------------------Git Work Flow------------------------------------------------
+- In git there are [three types of things](https://www.quora.com/What-is-the-meaning-of-commit-and-stage-in-git) we have to deal with:  
 
-
-
-7. In git there are three types of things we have to deal with:  
-
-        ****[ https://www.quora.com/What-is-the-meaning-of-commit-and-stage-in-git ]
 
 		i)  Working copy: 
 		When we create a file it remains in the working copy. Here, "first.txt" is in working copy now.
@@ -53,11 +50,6 @@
 		a) git log
 		or only for specific author's commit history,
 		a) git log --author="author's username"
-
-
-
----------------------------------------Work Flow End-------------------------------------------------------
-
 
 
 
