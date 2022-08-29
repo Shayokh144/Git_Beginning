@@ -19,8 +19,9 @@
 		**** Any valid email address and username can be used.
 		**** if you want to configure this only for specific repo just remove the --global from avove command and run it.
 - Now we are ready to perform version controlling. At first we have to create a git repository by using this command:
-	- **git init**
-		- After this an empty repository is created.
+
+		git init
+		**** After this an empty repository is created.
 		
 
 
@@ -72,24 +73,20 @@
 		i) git checkout slave
 		after writing this, we are in  the slave branch which is the copy of master branch because we create slave branch from master branch.
 
-11. This time open the "first.txt" file and you can see the same thing that was in the master branch. Now change the text. I add 
-a new line "I am from slave" after the existing line and save this. Now, we have to commit these changes to the current slave branch. So, write:
+- This time open the "first.txt" file and you can see the same thing that was in the master branch. Now change the text. I add a new line "I am from slave" after the existing line and save this. Now, we have to commit these changes to the current slave branch. So, write:
 
-	i)  git add .
-	ii) git commit -m "This is my first commit from slave"		
+		i)  git add .
+		ii) git commit -m "This is my first commit from slave"		
 
-12. To understand the branching effect we have to go to the master branch using:
-    i) git checkout master
-    Now open the "first.txt" file you only find the text "Thsi is my first git 
-    prac." that we wrote and commit when we were in the master branch.
+- To understand the branching effect we have to go to the master branch using:
 
-13. To delete any branch use :
-    i) git branch -D Branch_Name
+		i) git checkout master
+- Now open the "first.txt" file you only find the text "Thsi is my first git prac." that we wrote and commit when we were in the master branch.
 
-   
+- To delete any branch use :
 
+		i) git branch -D Branch_Name
 
-    -------------------------------------Branch End-------------------------------------
 
 ------------------------------------------Merge--------------------------------------------------------
 
