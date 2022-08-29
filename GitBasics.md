@@ -53,21 +53,22 @@
 
 
 
------------------------------------------ Git Branch------------------------------------------------------
+## Git Branch
 
-8. By default when we initiate a git repository we are in master branch. To check this write:
+8- By default when we initiate a git repository we are in master branch. To check this write:
 
 		i) git branch
 		this cmd shows the names of branches. As we didn't create any branch it will show only "master" branch.
 
-9. To creat a new branch from current branch :
+- To creat a new branch from current branch :
 
 		i) git branch slave
 		This cmd create a new branch named "slave" from current branch [ we are currently in master branch]. 
 		To find out if the new branch is created or not use this cmd: git branch
 		it will show the names of branches and an asteric symbol beside the current branch name.
 
-10. Now, if we want to go another branch [slave] from current branch [master] :
+- Now, if we want to go another branch [slave] from current branch [master] :
+
 		i) git checkout slave
 		after writing this, we are in  the slave branch which is the copy of master branch because we create slave branch from master branch.
 
