@@ -177,93 +177,96 @@ Second one is better for small changes. It will kepp working tree cleaner. To do
 
 
 
-----------------------------------------------------------------------------------------
-			Undo Redo Most Recent Commit
-----------------------------------------------------------------------------------------
-$ git commit -m "Something terribly misguided"             # (1) commit done
-$ git reset HEAD~                                          # (2) get back committed changes
-<< edit files as necessary >>                              # (3)
-$ git add ...                                              # (4) add again
-$ git commit -c ORIG_HEAD                                  # (5) commit again
+
+## Undo Redo Most Recent Commit
 
 
-
-------------------------------------------------------------------------------------------------------------
-			discard change of a file / get back to the previous state of a file
-------------------------------------------------------------------------------------------------------------
-git checkout -- file_name
+		$ git commit -m "Something terribly misguided"             # (1) commit done
+		$ git reset HEAD~                                          # (2) get back committed changes
+		<< edit files as necessary >>                              # (3)
+		$ git add ...                                              # (4) add again
+		$ git commit -c ORIG_HEAD                                  # (5) commit again
 
 
 
 
-------------------------------------------------------------------------------------------------------------
-			merge conflict
-------------------------------------------------------------------------------------------------------------
-when merge conflict occurs, our local changes are shown inside the HEAD block and remote changes will be slown after thee ===== block, like below:
-
-<<<<< HEAD
-*** here will be our local changes
-=====================
-Here will be the remote changes
->>>>>>>>
+## discard change of a file / get back to the previous state of a file
 
 
-------------------------------------------------------------------------------------------------------------
-			untrack a file
-------------------------------------------------------------------------------------------------------------
-command for untracking a file:
-git rm --cached filepath+Name
-
-** after running this command git will not track the file, but it will remain in the file system of computer 
+		git checkout -- file_name
 
 
 
-------------------------------------------------------------------------------------------------------------
-			go back to a previous commit, then back to the latest commit
-------------------------------------------------------------------------------------------------------------
-
-go back to any previous commit:
-	git checkout <commit_hash>
-
-** This would detach the head. So, to get back to the latest commit run the following command:
-	git checkout BRANCH_NAME
-details : https://stackoverflow.com/a/39197098/4245112
+## merge conflict
 
 
+when merge conflict occurs, our local changes are shown inside the HEAD block and remote changes will be slown after three `=====` block, like below:
+
+	<<<<< HEAD
+	*** here will be our local changes
+	=====================
+	Here will be the remote changes
+	>>>>>>>>
 
 
-------------------------------------------------------------------------------------------------------------
-			GIT ALIAS
-------------------------------------------------------------------------------------------------------------
+
+## untrack a file
+
+
+- command for untracking a file:
+
+		git rm --cached filepath+Name
+
+		*** after running this command git will not track the file, but it will remain in the file system of computer 
+
+
+
+## Go back to a previous commit, then back to the latest commit
+
+
+
+- go back to any previous commit:
+
+		git checkout <commit_hash>
+
+- This would detach the head. So, to get back to the latest commit run the following command:
+		
+		git checkout BRANCH_NAME
+
+- [details](https://stackoverflow.com/a/39197098/4245112)
+
+
+
+# GIT ALIAS
+
 
 * using alias we can shotening git commands
-	* cmd : git config --global alias.logo 'log --oneline'
-	* after running above command we can use 'git logo' instead of 'git log --oneline'
-	* cmd : git config --global alias.cane 'commit --amend --no-edit'
-	* after running this command we can use 'git cane' instead of 'git commit --amend --no-edit'
+	* ***git config --global alias.logo 'log --oneline'***
+		* after running above command we can use 'git logo' instead of 'git log --oneline'
+	* ***git config --global alias.cane 'commit --amend --no-edit'***
+		* after running this command we can use 'git cane' instead of 'git commit --amend --no-edit'
 * find list of all alias:
-	* cmd : git config --list | grep alias
+	* ***git config --list | grep alias***
 	* it will show:
-		alias.logo=log --oneline
-		alias.cane=commit --amend --no-edit
+		- alias.logo=log --oneline
+		- alias.cane=commit --amend --no-edit
 
 
----------------------------------------------------------------------------------------------------------
-			go prevoius or next head
----------------------------------------------------------------------------------------------------------
-Moving upwards one commit at a time with ^
-Moving upwards a number of times with ~<number of times>
 
-----------------------------------------------------------------------------------------------------------
-caret ^ operator
-----------------------------------------------------------------------------------------------------------
+## Go prevoius or next head
 
-Let's look at the Caret (^) operator first. Each time you append that to a ref name, you are telling Git to find the parent of the specified commit.
 
-So saying main^ is equivalent to "the first parent of main".
+- Moving upwards one commit at a time with `^`
+- Moving upwards a number of times with `~<number of times>`
 
-main^^ is the grandparent (second-generation ancestor) of main
 
-git checkout main^
+### caret ^ operator
 
-this will move the head to the parent of main
+
+- Let's look at the Caret (^) operator first. Each time you append that to a ref name, you are telling Git to find the parent of the specified commit.
+- So saying main^ is equivalent to "the first parent of main".
+- main^^ is the grandparent (second-generation ancestor) of main
+
+		git checkout main^
+
+		*** this will move the head to the parent of main
