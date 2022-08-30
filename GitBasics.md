@@ -124,46 +124,56 @@
 		**** remove untracked changes.
  
  
- ---------------Remove all uncommited change---------------------------------------------------------
- https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes
-1. git reset
-2. git checkout .
-3. git clean -fdx
+## Remove all uncommited change
+
+- [undo uncommited changes](https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes)
+		
+		1. git reset
+		2. git checkout .
+		3. git clean -fdx
 
 
--------------Edit file that goes in last commited push ----------------
-https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8
+## [Edit file that goes in last commited push](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
 
 
-suppose there is a file "Abc.cpp" in which you changed and pushed. Suddenly you realize there should be a small change needed. There are two ways to do it -> i)  Commit and push again with new change
-			       ii) edit the last commit and then push 
+suppose there is a file "Abc.cpp" in which you changed and pushed. Suddenly you realize there should be a small change needed. There are two ways to do it -> 
+
+		i)  Commit and push again with new change
+		ii) edit the last commit and then push 
 Second one is better for small changes. It will kepp working tree cleaner. To do this follow the below steps:
-i)   git status
-ii)  find the desired file name with path like : "modified:  File_Path/Abc.cpp"
-iii) git add  File_Path/Abc.cpp
-iv)  git commit --amend --no-edit 
-*** if you dont want to chage the commit message use above command otherwise use git commit --amend
-v)  git push origin "BRANCH_NAME"
+
+		i)   git status
+		ii)  find the desired file name with path like : "modified:  File_Path/Abc.cpp"
+		iii) git add  File_Path/Abc.cpp
+		iv)  git commit --amend --no-edit 
+		*** if you dont want to chage the commit message use above command otherwise use git commit --amend
+		v)  git push origin "BRANCH_NAME"
 
 
 
 
----------------------------------------------------------------------------------
-			pull vs pull --rebase
-----------------------------------------------------------------------------------
-https://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase
+
+## pull vs pull --rebase
+- read [this](https://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase)
 
 
 
-------------------------------------------------------------------------------------
-			All about STASH
-------------------------------------------------------------------------------------
-1. Find all list of stash - git stash list
-2. Stash files using message - git stash push -m "message"
-3. Apply particular stash from stash list - git stash apply stash@{Nth}
-4. Delete particular stash from list - git stash drop stash@{Nth}
-5. Apply and delete stash from stack at a time - git stash pop stash@{Nth}
-6. Show stash summary -  git stash show -p
+
+## All about STASH
+
+
+- Find all list of stash 
+	- ***git stash list***
+- Stash files using message 
+	- ***git stash push -m "message"***
+- Apply particular stash from stash list 
+	- ***git stash apply stash@{Nth}***
+- Delete particular stash from list 
+	- ***git stash drop stash@{Nth}***
+- Apply and delete stash from stack at a time 
+	- ***git stash pop stash@{Nth}***
+- Show stash summary 
+	- ***git stash show -p***
 
 
 
