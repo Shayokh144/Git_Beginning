@@ -253,7 +253,7 @@ when merge conflict occurs, our local changes are shown inside the HEAD block an
 
 
 
-## Go prevoius or next head
+## Go to prevoius or next head
 
 
 - Moving upwards one commit at a time with `^`
@@ -270,3 +270,34 @@ when merge conflict occurs, our local changes are shown inside the HEAD block an
 		git checkout main^
 
 		*** this will move the head to the parent of main
+
+
+## Git Cherry-pick
+- git cherry-pick will plop down a commit from anywhere in the tree onto HEAD (as long as that commit isn't an ancestor of HEAD)
+- The first command in this series is called **git cherry-pick**. It takes on the following form:
+
+		git cherry-pick <Commit1> <Commit2> <...>
+
+		*** It's a very straightforward way of saying that you would like to copy a series of commits below your current location (HEAD).
+
+## Git Interactive Rebase
+
+- Git cherry-pick is great when you know which commits you want (and you know their corresponding hashes) -- it's hard to beat the simplicity it provides. But what about the situation where you don't know what commits you want? Thankfully git has you covered there as well! We can use interactive rebasing for this -- it's the best way to review a series of commits you're about to rebase.
+
+- All interactive rebase means Git is using the rebase command with the -i option.
+- If you include this option, git will open up a UI to show you which commits are about to be copied below the target of the rebase. It also shows their commit hashes and messages, which is great for getting a bearing on what's what.
+- In interactive rebase you can do many more things like picking commits, dropping commits, squashing (combining) commits, amending commit messages, and even editing the commits themselves.
+
+		git rebase -i HEAD~4
+
+		*** this will provide opportunity to edit last 4 commits
+
+
+
+
+## Other Commands
+- **git merge commit-id**
+> will tahke the branch forward to a specific commit by moving the pointer forward using the fast-forward merge process
+- **git rm -r --cached myFolder**
+> Remove directory from Git but NOT local
+
