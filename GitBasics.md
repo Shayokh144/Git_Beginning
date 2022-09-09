@@ -293,11 +293,52 @@ when merge conflict occurs, our local changes are shown inside the HEAD block an
 		*** this will provide opportunity to edit last 4 commits
 
 
+## Git Remote Branches
 
+- The first thing you may have noticed is that after cloning a remote branch appeared in our local repository called `<remote name>/<branch name>`. This type of branch is called a remote branch; remote branches have special properties because they serve a unique purpose.
+- Remote branches reflect the state of remote repositories (since you last talked to those remote repositories). They help you understand the difference between your local work and what work is public -- a critical step to take before sharing your work with others.
+- Remote branches have the special property that when you check them out, you are put into detached HEAD mode. Git does this on purpose because you can't work on these branches directly; you have to work elsewhere and then share your work with the remote (after which your remote branches will be updated).
+- To be clear: Remote branches are on your local repository, not on the remote repository.
+- Most developers actually name their main remote origin
+- This is because origin/branch_name will only update when the remote updates.
+
+
+## Git Fetch
+- fetch data from a remote repository
+
+		git fetch
+
+- only remote branches will update to reflect that new representation.
+
+### Before fetch
+<img src="./static_res/before_fetch.png" alt="before_fetch" style="height: 350px; width:750px;"/>
+
+### After fetch
+<img src="./static_res/after_fetch.png" alt="before_fetch" style="height: 350px; width:750px;"/>
+
+### What fetch does
+git fetch performs two main steps, and two main steps only. It:
+
+- downloads the commits that the remote has but are missing from our local repository, and...
+updates where our remote branches point (for instance, o/main)
+- git fetch essentially brings our local representation of the remote repository into synchronization with what the actual remote repository looks like (right now).
+
+- If you remember from the previous lesson, we said that remote branches reflect the state of the remote repositories since you last talked to those remotes. git fetch is the way you talk to these remotes! Hopefully the connection between remote branches and git fetch is apparent now.
+
+- git fetch usually talks to the remote repository through the Internet (via a protocol like http:// or git://).
+
+### What fetch doesn't do
+
+- git fetch, however, does not change anything about your local state. It will not update your main branch or change anything about how your file system looks right now.
+
+- This is important to understand because a lot of developers think that running git fetch will make their local work reflect the state of the remote. It may download all the necessary data to do that, but it does not actually change any of your local files. We will learn commands in later lessons to do just that :D
+
+- So at the end of the day, you can think of running git fetch as a download step.
 
 ## Other Commands
 - **git merge commit-id**
 > will tahke the branch forward to a specific commit by moving the pointer forward using the fast-forward merge process
 - **git rm -r --cached myFolder**
 > Remove directory from Git but NOT local
+
 
