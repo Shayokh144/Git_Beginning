@@ -335,9 +335,21 @@ updates where our remote branches point (for instance, o/main)
 
 - So at the end of the day, you can think of running git fetch as a download step.
 
+
+## Git Pull
+There are actually many ways to do this -- once you have new commits available locally, you can incorporate them as if they were just normal commits on other branches. This means you could execute commands like:
+
+	git cherry-pick o/main
+	git rebase o/main
+	git merge o/main
+	etc., etc.
+In fact, the workflow of fetching remote changes and then merging them is so common that git actually provides a command that does both at once! That command is `git pull`.
+So, `git pull` is equivqlent to `git fetch; git merge`
+
+
 ## Other Commands
 - **git merge commit-id**
-> will tahke the branch forward to a specific commit by moving the pointer forward using the fast-forward merge process
+> will take the branch forward to a specific commit by moving the pointer forward using the fast-forward merge process
 - **git rm -r --cached myFolder**
 > Remove directory from Git but NOT local
 
