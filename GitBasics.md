@@ -310,6 +310,9 @@ when merge conflict occurs, our local changes are shown inside the HEAD block an
 
 - only remote branches will update to reflect that new representation.
 
+<img src="./static_res/fetch_place.png" alt="before_fetch" />
+
+
 ### Before fetch
 <img src="./static_res/before_fetch.png" alt="before_fetch" style="height: 350px; width:750px;"/>
 
@@ -345,6 +348,23 @@ There are actually many ways to do this -- once you have new commits available l
 	etc., etc.
 In fact, the workflow of fetching remote changes and then merging them is so common that git actually provides a command that does both at once! That command is `git pull`.
 So, `git pull` is equivqlent to `git fetch; git merge`
+
+## Git push
+In order to specify both the source and the destination in push command, simply join the two together with a colon:
+
+		git push origin <source>:<destination>
+
+This is commonly referred to as a colon refspec. Refspec is just a fancy name for a location that git can figure out (like the branch foo or even just HEAD~1).
+
+Once you are specifying both the source and destination independently, you can get quite fancy and precise with remote commands. Let's see a demo!
+
+### Before push
+<img src="./static_res/push_with_args_before.png" alt="before_push" style="height: 350px; width:750px;"/>
+
+### After push
+<img src="./static_res/push_with_args_after.png" alt="after_push" style="height: 350px; width:750px;"/>
+
+- #### if the destination you want to push doesn't exist, git will create the branch on the remote.
 
 
 ## Other Commands
