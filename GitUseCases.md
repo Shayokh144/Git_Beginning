@@ -27,3 +27,16 @@ You meant to follow the process creating a branch then pushing that branch and d
 
 ### The solution
 Create another branch called feature and push that to the remote. Also reset your main back to be in sync with the remote otherwise you may have issues next time you do a pull and someone else's commit conflicts with yours.
+
+## Three
+#### Stuatuion
+Accidentally push a file to the remote repo that is actually not needed.
+
+#### Solution
+- Need to get back to the previous state of the file
+
+		git checkout BRANCH_NAME~1 FILE_NAME
+
+- Commit current Change
+- Push again to the remote
+- [resource](https://stackoverflow.com/a/725893/4245112)
