@@ -48,5 +48,5 @@ Accidentally push a file to the remote repo that is actually not needed.
 Accidentally push a branch with the wrong name.
 
 #### Solution
-- [resource](https://stackoverflow.com/a/45561865/4245112)
+- [Rename Branch in local and remote](https://stackoverflow.com/a/45561865/4245112)
 
