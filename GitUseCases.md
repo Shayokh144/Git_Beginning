@@ -50,3 +50,12 @@ Accidentally push a branch with the wrong name.
 #### Solution
 - [Rename Branch in local and remote](https://stackoverflow.com/a/45561865/4245112)
 
+
+## Case 5
+
+#### Stuatuion
+Accidentally push a branch with the wrong commit message or want to change a old commit message
+
+#### Solution
+- [Use interactive rebase](https://stackoverflow.com/a/50386951/4245112)
+
