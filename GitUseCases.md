@@ -29,7 +29,7 @@ You meant to follow the process creating a branch then pushing that branch and d
 Create another branch called feature and push that to the remote. Also reset your main back to be in sync with the remote otherwise you may have issues next time you do a pull and someone else's commit conflicts with yours.
 
 ## Case 3
-#### Stuatuion
+#### Situation
 Accidentally push a file to the remote repo that is actually not needed.
 
 #### Solution
@@ -44,7 +44,7 @@ Accidentally push a file to the remote repo that is actually not needed.
 
 
 ## Case 4
-#### Stuatuion
+#### Situation
 Accidentally push a branch with the wrong name.
 
 #### Solution
@@ -53,9 +53,36 @@ Accidentally push a branch with the wrong name.
 
 ## Case 5
 
-#### Stuatuion
+#### Situation
 Accidentally push a branch with the wrong commit message or want to change a old commit message
 
 #### Solution
 - [Use interactive rebase](https://stackoverflow.com/a/50386951/4245112)
+
+
+
+## Case 6
+
+#### Situation
+- I am in branch `feature_a`
+- This `feature_a` branch was created from branch `develop`
+- Now I need to change the base of `feature_a` from `develop` to `release`
+- In this process I only want commit from `feature_a` to move to `release`, don't want any extra commit from `develop`
+
+#### Solution
+Assuming you are currently on your `feature_a` branch, run the following command:
+
+
+`git rebase --onto release develop feature_a`
+
+(Note: If you are already on `feature_a`, you can just type `git rebase --onto release develop`)
+
+####  How it Works
+This command takes three arguments:
+
+- release (newbase): The branch you want to attach your commits to.
+- develop (oldbase): The upstream branch you want to leave behind. Git will look at the commits between develop and feature_a to figure out exactly which commits belong only to your feature.
+- feature_a (branch): The branch you are moving.
+- Git will take all the unique commits from feature_a (that are not in develop) and replay them one by one on top of the release branch.
+
 
